@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Chipmunk-Wrapper/Classes/ChipmunkEx/ChipmunkEx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Chipmunk-5.3.4/macosx/Chipmunk.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Sparrow-Framework/sparrow/src/Sparrow.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../NaviGamer/Tank-day2/Tank-day2.xcodeproj">
+   </FileRef>
+</Workspace>

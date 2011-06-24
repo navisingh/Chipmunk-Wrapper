@@ -54,7 +54,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 }
 
 + (void) createBody:(id)listener cmSpace:(CMSpace*)cmSpace bodyConfig:(NSDictionary*)bodyConfig name:(NSString*)name {
-	NSNumber *mass = [bodyConfig valueForKey:@"mass"];
+//	NSNumber *mass = [bodyConfig valueForKey:@"mass"];
 	
 		//	CMBody *cmBody = [cmSpace addBodyWithMass:[mass floatValue] moment:[moment floatValue]];
 	CMBody *cmBody = [cmSpace addBodyWithMass:1 moment:0];

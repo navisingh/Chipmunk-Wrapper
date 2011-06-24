@@ -13,4 +13,7 @@
    <FileRef
       location = "group:../../NaviGamer/Tank-day2/Tank-day2.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:../Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/ChipmunkWrapper.xcodeproj">
+   </FileRef>
 </Workspace>

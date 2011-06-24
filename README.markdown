@@ -8,6 +8,8 @@ This Wrapper also add some functionality so that it can integrate very well with
 Version details:
 ----------------
 
+Added workspace, and use chickmunk xproj file as opposed to the library directly.
+
 Current head release:
 
 TODO:

@@ -18,15 +18,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+const cpConstraintClass *cpRatchetJointGetClass();
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+typedef struct cpRatchetJoint {
+	cpConstraint constraint;
+	cpFloat angle, phase, ratchet;
+	
+	cpFloat iSum;
+		
+	cpFloat bias;
+	cpFloat jAcc, jMax;
+} cpRatchetJoint;
+
+cpRatchetJoint *cpRatchetJointAlloc(void);
+cpRatchetJoint *cpRatchetJointInit(cpRatchetJoint *joint, cpBody *a, cpBody *b, cpFloat phase, cpFloat ratchet);
+cpConstraint *cpRatchetJointNew(cpBody *a, cpBody *b, cpFloat phase, cpFloat ratchet);
+
+CP_DefineConstraintProperty(cpRatchetJoint, cpFloat, angle, Angle);
+CP_DefineConstraintProperty(cpRatchetJoint, cpFloat, phase, Phase);
+CP_DefineConstraintProperty(cpRatchetJoint, cpFloat, ratchet, Ratchet);

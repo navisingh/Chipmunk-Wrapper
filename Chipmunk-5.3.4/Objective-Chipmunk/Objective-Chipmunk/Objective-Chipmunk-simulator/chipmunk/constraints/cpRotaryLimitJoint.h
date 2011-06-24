@@ -18,15 +18,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+const cpConstraintClass *cpRotaryLimitJointGetClass();
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+typedef struct cpRotaryLimitJoint {
+	cpConstraint constraint;
+	cpFloat min, max;
+	
+	cpFloat iSum;
+		
+	cpFloat bias;
+	cpFloat jAcc, jMax;
+} cpRotaryLimitJoint;
+
+cpRotaryLimitJoint *cpRotaryLimitJointAlloc(void);
+cpRotaryLimitJoint *cpRotaryLimitJointInit(cpRotaryLimitJoint *joint, cpBody *a, cpBody *b, cpFloat min, cpFloat max);
+cpConstraint *cpRotaryLimitJointNew(cpBody *a, cpBody *b, cpFloat min, cpFloat max);
+
+CP_DefineConstraintProperty(cpRotaryLimitJoint, cpFloat, min, Min);
+CP_DefineConstraintProperty(cpRotaryLimitJoint, cpFloat, max, Max);

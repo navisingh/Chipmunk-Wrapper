@@ -18,15 +18,31 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+struct chipmunkDemo;
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+typedef cpSpace *(*demoInitFunc)(void);
+typedef void (*demoUpdateFunc)(int ticks);
+typedef void (*demoDestroyFunc)(void);
+
+typedef struct chipmunkDemo {
+	const char *name;
+ 
+	drawSpaceOptions *drawOptions;
+	
+	demoInitFunc initFunc;
+	demoUpdateFunc updateFunc;
+	demoDestroyFunc destroyFunc;
+} chipmunkDemo;
+
+static inline cpFloat
+frand(void)
+{
+	return (cpFloat)rand()/(cpFloat)RAND_MAX;
+}
+
+extern cpVect arrowDirection;
+extern char messageString[1024];
+
+#define GRABABLE_MASK_BIT (1<<31)
+#define NOT_GRABABLE_MASK (~GRABABLE_MASK_BIT)

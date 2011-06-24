@@ -18,15 +18,29 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+typedef cpFloat (*cpDampedRotarySpringTorqueFunc)(struct cpConstraint *spring, cpFloat relativeAngle);
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+const cpConstraintClass *cpDampedRotarySpringGetClass();
+
+typedef struct cpDampedRotarySpring {
+	cpConstraint constraint;
+	cpFloat restAngle;
+	cpFloat stiffness;
+	cpFloat damping;
+	cpDampedRotarySpringTorqueFunc springTorqueFunc;
+	
+	cpFloat target_wrn;
+	cpFloat w_coef;
+	
+	cpFloat iSum;
+} cpDampedRotarySpring;
+
+cpDampedRotarySpring *cpDampedRotarySpringAlloc(void);
+cpDampedRotarySpring *cpDampedRotarySpringInit(cpDampedRotarySpring *joint, cpBody *a, cpBody *b, cpFloat restAngle, cpFloat stiffness, cpFloat damping);
+cpConstraint *cpDampedRotarySpringNew(cpBody *a, cpBody *b, cpFloat restAngle, cpFloat stiffness, cpFloat damping);
+
+CP_DefineConstraintProperty(cpDampedRotarySpring, cpFloat, restAngle, RestAngle);
+CP_DefineConstraintProperty(cpDampedRotarySpring, cpFloat, stiffness, Stiffness);
+CP_DefineConstraintProperty(cpDampedRotarySpring, cpFloat, damping, Damping);
+CP_DefineConstraintProperty(cpDampedRotarySpring, cpDampedRotarySpringTorqueFunc, springTorqueFunc, SpringTorqueFunc);

@@ -18,15 +18,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
+ 
+#include <math.h>
+#include <stdlib.h>
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+#include "chipmunk.h"
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+cpVect
+cpBBClampVect(const cpBB bb, const cpVect v)
+{
+	cpFloat x = cpfmin(cpfmax(bb.l, v.x), bb.r);
+	cpFloat y = cpfmin(cpfmax(bb.b, v.y), bb.t);
+	return cpv(x, y);
+}
+
+cpVect
+cpBBWrapVect(const cpBB bb, const cpVect v)
+{
+	cpFloat ix = cpfabs(bb.r - bb.l);
+	cpFloat modx = cpfmod(v.x - bb.l, ix);
+	cpFloat x = (modx > 0.0f) ? modx : modx + ix;
+	
+	cpFloat iy = cpfabs(bb.t - bb.b);
+	cpFloat mody = cpfmod(v.y - bb.b, iy);
+	cpFloat y = (mody > 0.0f) ? mody : mody + iy;
+	
+	return cpv(x + bb.l, y + bb.b);
+}

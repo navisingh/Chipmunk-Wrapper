@@ -18,15 +18,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+const cpConstraintClass *cpGearJointGetClass();
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+typedef struct cpGearJoint {
+	cpConstraint constraint;
+	cpFloat phase, ratio;
+	cpFloat ratio_inv;
+	
+	cpFloat iSum;
+		
+	cpFloat bias;
+	cpFloat jAcc, jMax;
+} cpGearJoint;
+
+cpGearJoint *cpGearJointAlloc(void);
+cpGearJoint *cpGearJointInit(cpGearJoint *joint, cpBody *a, cpBody *b, cpFloat phase, cpFloat ratio);
+cpConstraint *cpGearJointNew(cpBody *a, cpBody *b, cpFloat phase, cpFloat ratio);
+
+CP_DefineConstraintProperty(cpGearJoint, cpFloat, phase, Phase);
+CP_DefineConstraintGetter(cpGearJoint, cpFloat, ratio, Ratio);
+void cpGearJointSetRatio(cpConstraint *constraint, cpFloat value);

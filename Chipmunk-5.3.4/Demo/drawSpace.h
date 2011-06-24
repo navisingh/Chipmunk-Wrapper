@@ -18,7 +18,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
 typedef struct drawSpaceOptions {
 	int drawHash;
@@ -29,4 +28,4 @@ typedef struct drawSpaceOptions {
 	float lineThickness;
 } drawSpaceOptions;
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+void drawSpace(cpSpace *space, drawSpaceOptions *options);

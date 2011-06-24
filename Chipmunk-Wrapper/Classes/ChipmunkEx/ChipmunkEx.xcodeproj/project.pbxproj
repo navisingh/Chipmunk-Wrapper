@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D16AD2A13B5352700D2F426 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AD2913B5352700D2F426 /* Foundation.framework */; };
+		5D16AD8113B535D400D2F426 /* CMPostCallbackHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD3413B535D400D2F426 /* CMPostCallbackHandler.h */; };
+		5D16AD8213B535D400D2F426 /* CMPostCallbackHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD3513B535D400D2F426 /* CMPostCallbackHandler.m */; };
+		5D16AD8313B535D400D2F426 /* CMQueryFunctionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD3613B535D400D2F426 /* CMQueryFunctionHandler.h */; };
+		5D16AD8413B535D400D2F426 /* CMQueryFunctionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD3713B535D400D2F426 /* CMQueryFunctionHandler.m */; };
+		5D16AD8513B535D400D2F426 /* ChipmunkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD3813B535D400D2F426 /* ChipmunkManager.h */; };
+		5D16AD8613B535D400D2F426 /* CMBody.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD3913B535D400D2F426 /* CMBody.h */; };
+		5D16AD8713B535D400D2F426 /* CMBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD3A13B535D400D2F426 /* CMBody.m */; };
+		5D16AD8813B535D400D2F426 /* CMData.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD3B13B535D400D2F426 /* CMData.h */; };
+		5D16AD8913B535D400D2F426 /* CMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD3C13B535D400D2F426 /* CMData.m */; };
+		5D16AD8A13B535D400D2F426 /* CMMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD3D13B535D400D2F426 /* CMMacros.h */; };
+		5D16AD8B13B535D400D2F426 /* CMObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD3E13B535D400D2F426 /* CMObject.h */; };
+		5D16AD8C13B535D400D2F426 /* CMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD3F13B535D400D2F426 /* CMObject.m */; };
+		5D16AD8D13B535D400D2F426 /* CMSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD4013B535D400D2F426 /* CMSpace.h */; };
+		5D16AD8E13B535D400D2F426 /* CMSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD4113B535D400D2F426 /* CMSpace.m */; };
+		5D16AD8F13B535D400D2F426 /* CMTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD4213B535D400D2F426 /* CMTypes.h */; };
+		5D16AD9013B535D400D2F426 /* CMArbiter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD4413B535D400D2F426 /* CMArbiter.h */; };
+		5D16AD9113B535D400D2F426 /* CMArbiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD4513B535D400D2F426 /* CMArbiter.m */; };
+		5D16AD9213B535D400D2F426 /* CMCollisionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD4613B535D400D2F426 /* CMCollisionHandler.h */; };
+		5D16AD9313B535D400D2F426 /* CMCollisionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD4713B535D400D2F426 /* CMCollisionHandler.m */; };
+		5D16AD9413B535D400D2F426 /* CMContactPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD4813B535D400D2F426 /* CMContactPoint.h */; };
+		5D16AD9513B535D400D2F426 /* CMContactPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD4913B535D400D2F426 /* CMContactPoint.m */; };
+		5D16AD9613B535D400D2F426 /* CMConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD4B13B535D400D2F426 /* CMConstraint.h */; };
+		5D16AD9713B535D400D2F426 /* CMConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD4C13B535D400D2F426 /* CMConstraint.m */; };
+		5D16AD9813B535D400D2F426 /* CMDampedRotarySpringConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD4D13B535D400D2F426 /* CMDampedRotarySpringConstraint.h */; };
+		5D16AD9913B535D400D2F426 /* CMDampedRotarySpringConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD4E13B535D400D2F426 /* CMDampedRotarySpringConstraint.m */; };
+		5D16AD9A13B535D400D2F426 /* CMDampedSpringConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD4F13B535D400D2F426 /* CMDampedSpringConstraint.h */; };
+		5D16AD9B13B535D400D2F426 /* CMDampedSpringConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD5013B535D400D2F426 /* CMDampedSpringConstraint.m */; };
+		5D16AD9C13B535D400D2F426 /* CMGearJointConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD5113B535D400D2F426 /* CMGearJointConstraint.h */; };
+		5D16AD9D13B535D400D2F426 /* CMGearJointConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD5213B535D400D2F426 /* CMGearJointConstraint.m */; };
+		5D16AD9E13B535D400D2F426 /* CMGrooveJointConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD5313B535D400D2F426 /* CMGrooveJointConstraint.h */; };
+		5D16AD9F13B535D400D2F426 /* CMGrooveJointConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD5413B535D400D2F426 /* CMGrooveJointConstraint.m */; };
+		5D16ADA013B535D400D2F426 /* CMPinJointConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD5513B535D400D2F426 /* CMPinJointConstraint.h */; };
+		5D16ADA113B535D400D2F426 /* CMPinJointConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD5613B535D400D2F426 /* CMPinJointConstraint.m */; };
+		5D16ADA213B535D400D2F426 /* CMPivotJointConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD5713B535D400D2F426 /* CMPivotJointConstraint.h */; };
+		5D16ADA313B535D400D2F426 /* CMPivotJointConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD5813B535D400D2F426 /* CMPivotJointConstraint.m */; };
+		5D16ADA413B535D400D2F426 /* CMRatchetJointConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD5913B535D400D2F426 /* CMRatchetJointConstraint.h */; };
+		5D16ADA513B535D400D2F426 /* CMRatchetJointConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD5A13B535D400D2F426 /* CMRatchetJointConstraint.m */; };
+		5D16ADA613B535D400D2F426 /* CMRotaryLimitConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD5B13B535D400D2F426 /* CMRotaryLimitConstraint.h */; };
+		5D16ADA713B535D400D2F426 /* CMRotaryLimitConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD5C13B535D400D2F426 /* CMRotaryLimitConstraint.m */; };
+		5D16ADA813B535D400D2F426 /* CMSimpleMotorConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD5D13B535D400D2F426 /* CMSimpleMotorConstraint.h */; };
+		5D16ADA913B535D400D2F426 /* CMSimpleMotorConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD5E13B535D400D2F426 /* CMSimpleMotorConstraint.m */; };
+		5D16ADAA13B535D400D2F426 /* CMSlideJointConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD5F13B535D400D2F426 /* CMSlideJointConstraint.h */; };
+		5D16ADAB13B535D400D2F426 /* CMSlideJointConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD6013B535D400D2F426 /* CMSlideJointConstraint.m */; };
+		5D16ADAC13B535D400D2F426 /* drawSpace.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD6113B535D400D2F426 /* drawSpace.c */; };
+		5D16ADAD13B535D400D2F426 /* drawSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD6213B535D400D2F426 /* drawSpace.h */; };
+		5D16ADAE13B535D400D2F426 /* CMBlastEffect.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD6413B535D400D2F426 /* CMBlastEffect.h */; };
+		5D16ADAF13B535D400D2F426 /* CMBlastEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD6513B535D400D2F426 /* CMBlastEffect.m */; };
+		5D16ADB013B535D400D2F426 /* CMDefaultLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD6713B535D400D2F426 /* CMDefaultLoader.h */; };
+		5D16ADB113B535D400D2F426 /* CMDefaultLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD6813B535D400D2F426 /* CMDefaultLoader.m */; };
+		5D16ADB213B535D400D2F426 /* CMLoaderListenerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD6913B535D400D2F426 /* CMLoaderListenerProtocol.h */; };
+		5D16ADB313B535D400D2F426 /* CMPhysicsEditorLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD6A13B535D400D2F426 /* CMPhysicsEditorLoader.h */; };
+		5D16ADB413B535D400D2F426 /* CMPhysicsEditorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD6B13B535D400D2F426 /* CMPhysicsEditorLoader.m */; };
+		5D16ADB513B535D400D2F426 /* CMCircleShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD6D13B535D400D2F426 /* CMCircleShape.h */; };
+		5D16ADB613B535D400D2F426 /* CMCircleShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD6E13B535D400D2F426 /* CMCircleShape.m */; };
+		5D16ADB713B535D400D2F426 /* CMPolyShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD6F13B535D400D2F426 /* CMPolyShape.h */; };
+		5D16ADB813B535D400D2F426 /* CMPolyShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD7013B535D400D2F426 /* CMPolyShape.m */; };
+		5D16ADB913B535D400D2F426 /* CMRectShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD7113B535D400D2F426 /* CMRectShape.h */; };
+		5D16ADBA13B535D400D2F426 /* CMRectShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD7213B535D400D2F426 /* CMRectShape.m */; };
+		5D16ADBB13B535D400D2F426 /* CMSegmentShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD7313B535D400D2F426 /* CMSegmentShape.h */; };
+		5D16ADBC13B535D400D2F426 /* CMSegmentShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD7413B535D400D2F426 /* CMSegmentShape.m */; };
+		5D16ADBD13B535D400D2F426 /* CMShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD7513B535D400D2F426 /* CMShape.h */; };
+		5D16ADBE13B535D400D2F426 /* CMShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD7613B535D400D2F426 /* CMShape.m */; };
+		5D16ADBF13B535D400D2F426 /* CMSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD7813B535D400D2F426 /* CMSprite.h */; };
+		5D16ADC013B535D400D2F426 /* CMSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD7913B535D400D2F426 /* CMSprite.m */; };
+		5D16ADC113B535D400D2F426 /* SPDebugDraw.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD7A13B535D400D2F426 /* SPDebugDraw.h */; };
+		5D16ADC213B535D400D2F426 /* SPDebugDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD7B13B535D400D2F426 /* SPDebugDraw.m */; };
+		5D16ADC313B535D400D2F426 /* SPPoint+Chipmunk.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD7C13B535D400D2F426 /* SPPoint+Chipmunk.h */; };
+		5D16ADC413B535D400D2F426 /* SPPoint+Chipmunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD7D13B535D400D2F426 /* SPPoint+Chipmunk.m */; };
+		5D16ADC513B535D400D2F426 /* CMInvocationUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D16AD7F13B535D400D2F426 /* CMInvocationUtils.h */; };
+		5D16ADC613B535D400D2F426 /* CMInvocationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AD8013B535D400D2F426 /* CMInvocationUtils.m */; };
+		5D16ADC813B5360500D2F426 /* libSparrow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16ADC713B5360500D2F426 /* libSparrow.a */; };
+		5D16ADCA13B5360C00D2F426 /* libChipmunk-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16ADC913B5360C00D2F426 /* libChipmunk-iPhone.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D16AD2613B5352700D2F426 /* libChipmunkEx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChipmunkEx.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D16AD2913B5352700D2F426 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5D16AD2D13B5352700D2F426 /* ChipmunkEx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChipmunkEx-Prefix.pch"; sourceTree = "<group>"; };
+		5D16AD3413B535D400D2F426 /* CMPostCallbackHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPostCallbackHandler.h; sourceTree = "<group>"; };
+		5D16AD3513B535D400D2F426 /* CMPostCallbackHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPostCallbackHandler.m; sourceTree = "<group>"; };
+		5D16AD3613B535D400D2F426 /* CMQueryFunctionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQueryFunctionHandler.h; sourceTree = "<group>"; };
+		5D16AD3713B535D400D2F426 /* CMQueryFunctionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQueryFunctionHandler.m; sourceTree = "<group>"; };
+		5D16AD3813B535D400D2F426 /* ChipmunkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChipmunkManager.h; path = "../../Chipmunk-Manager/ChipmunkManager.h"; sourceTree = "<group>"; };
+		5D16AD3913B535D400D2F426 /* CMBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMBody.h; path = "../../Chipmunk-Manager/CMBody.h"; sourceTree = "<group>"; };
+		5D16AD3A13B535D400D2F426 /* CMBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMBody.m; path = "../../Chipmunk-Manager/CMBody.m"; sourceTree = "<group>"; };
+		5D16AD3B13B535D400D2F426 /* CMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMData.h; path = "../../Chipmunk-Manager/CMData.h"; sourceTree = "<group>"; };
+		5D16AD3C13B535D400D2F426 /* CMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMData.m; path = "../../Chipmunk-Manager/CMData.m"; sourceTree = "<group>"; };
+		5D16AD3D13B535D400D2F426 /* CMMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMMacros.h; path = "../../Chipmunk-Manager/CMMacros.h"; sourceTree = "<group>"; };
+		5D16AD3E13B535D400D2F426 /* CMObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMObject.h; path = "../../Chipmunk-Manager/CMObject.h"; sourceTree = "<group>"; };
+		5D16AD3F13B535D400D2F426 /* CMObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMObject.m; path = "../../Chipmunk-Manager/CMObject.m"; sourceTree = "<group>"; };
+		5D16AD4013B535D400D2F426 /* CMSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMSpace.h; path = "../../Chipmunk-Manager/CMSpace.h"; sourceTree = "<group>"; };
+		5D16AD4113B535D400D2F426 /* CMSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMSpace.m; path = "../../Chipmunk-Manager/CMSpace.m"; sourceTree = "<group>"; };
+		5D16AD4213B535D400D2F426 /* CMTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMTypes.h; path = "../../Chipmunk-Manager/CMTypes.h"; sourceTree = "<group>"; };
+		5D16AD4413B535D400D2F426 /* CMArbiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMArbiter.h; sourceTree = "<group>"; };
+		5D16AD4513B535D400D2F426 /* CMArbiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMArbiter.m; sourceTree = "<group>"; };
+		5D16AD4613B535D400D2F426 /* CMCollisionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCollisionHandler.h; sourceTree = "<group>"; };
+		5D16AD4713B535D400D2F426 /* CMCollisionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCollisionHandler.m; sourceTree = "<group>"; };
+		5D16AD4813B535D400D2F426 /* CMContactPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMContactPoint.h; sourceTree = "<group>"; };
+		5D16AD4913B535D400D2F426 /* CMContactPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMContactPoint.m; sourceTree = "<group>"; };
+		5D16AD4B13B535D400D2F426 /* CMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMConstraint.h; sourceTree = "<group>"; };
+		5D16AD4C13B535D400D2F426 /* CMConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMConstraint.m; sourceTree = "<group>"; };
+		5D16AD4D13B535D400D2F426 /* CMDampedRotarySpringConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDampedRotarySpringConstraint.h; sourceTree = "<group>"; };
+		5D16AD4E13B535D400D2F426 /* CMDampedRotarySpringConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDampedRotarySpringConstraint.m; sourceTree = "<group>"; };
+		5D16AD4F13B535D400D2F426 /* CMDampedSpringConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDampedSpringConstraint.h; sourceTree = "<group>"; };
+		5D16AD5013B535D400D2F426 /* CMDampedSpringConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDampedSpringConstraint.m; sourceTree = "<group>"; };
+		5D16AD5113B535D400D2F426 /* CMGearJointConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGearJointConstraint.h; sourceTree = "<group>"; };
+		5D16AD5213B535D400D2F426 /* CMGearJointConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGearJointConstraint.m; sourceTree = "<group>"; };
+		5D16AD5313B535D400D2F426 /* CMGrooveJointConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMGrooveJointConstraint.h; sourceTree = "<group>"; };
+		5D16AD5413B535D400D2F426 /* CMGrooveJointConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMGrooveJointConstraint.m; sourceTree = "<group>"; };
+		5D16AD5513B535D400D2F426 /* CMPinJointConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPinJointConstraint.h; sourceTree = "<group>"; };
+		5D16AD5613B535D400D2F426 /* CMPinJointConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPinJointConstraint.m; sourceTree = "<group>"; };
+		5D16AD5713B535D400D2F426 /* CMPivotJointConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPivotJointConstraint.h; sourceTree = "<group>"; };
+		5D16AD5813B535D400D2F426 /* CMPivotJointConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPivotJointConstraint.m; sourceTree = "<group>"; };
+		5D16AD5913B535D400D2F426 /* CMRatchetJointConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRatchetJointConstraint.h; sourceTree = "<group>"; };
+		5D16AD5A13B535D400D2F426 /* CMRatchetJointConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRatchetJointConstraint.m; sourceTree = "<group>"; };
+		5D16AD5B13B535D400D2F426 /* CMRotaryLimitConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRotaryLimitConstraint.h; sourceTree = "<group>"; };
+		5D16AD5C13B535D400D2F426 /* CMRotaryLimitConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRotaryLimitConstraint.m; sourceTree = "<group>"; };
+		5D16AD5D13B535D400D2F426 /* CMSimpleMotorConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSimpleMotorConstraint.h; sourceTree = "<group>"; };
+		5D16AD5E13B535D400D2F426 /* CMSimpleMotorConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSimpleMotorConstraint.m; sourceTree = "<group>"; };
+		5D16AD5F13B535D400D2F426 /* CMSlideJointConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSlideJointConstraint.h; sourceTree = "<group>"; };
+		5D16AD6013B535D400D2F426 /* CMSlideJointConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSlideJointConstraint.m; sourceTree = "<group>"; };
+		5D16AD6113B535D400D2F426 /* drawSpace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = drawSpace.c; path = "../../Chipmunk-Manager/drawSpace.c"; sourceTree = "<group>"; };
+		5D16AD6213B535D400D2F426 /* drawSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = drawSpace.h; path = "../../Chipmunk-Manager/drawSpace.h"; sourceTree = "<group>"; };
+		5D16AD6413B535D400D2F426 /* CMBlastEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBlastEffect.h; sourceTree = "<group>"; };
+		5D16AD6513B535D400D2F426 /* CMBlastEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBlastEffect.m; sourceTree = "<group>"; };
+		5D16AD6713B535D400D2F426 /* CMDefaultLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDefaultLoader.h; sourceTree = "<group>"; };
+		5D16AD6813B535D400D2F426 /* CMDefaultLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDefaultLoader.m; sourceTree = "<group>"; };
+		5D16AD6913B535D400D2F426 /* CMLoaderListenerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLoaderListenerProtocol.h; sourceTree = "<group>"; };
+		5D16AD6A13B535D400D2F426 /* CMPhysicsEditorLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPhysicsEditorLoader.h; sourceTree = "<group>"; };
+		5D16AD6B13B535D400D2F426 /* CMPhysicsEditorLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPhysicsEditorLoader.m; sourceTree = "<group>"; };
+		5D16AD6D13B535D400D2F426 /* CMCircleShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCircleShape.h; sourceTree = "<group>"; };
+		5D16AD6E13B535D400D2F426 /* CMCircleShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCircleShape.m; sourceTree = "<group>"; };
+		5D16AD6F13B535D400D2F426 /* CMPolyShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPolyShape.h; sourceTree = "<group>"; };
+		5D16AD7013B535D400D2F426 /* CMPolyShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPolyShape.m; sourceTree = "<group>"; };
+		5D16AD7113B535D400D2F426 /* CMRectShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMRectShape.h; sourceTree = "<group>"; };
+		5D16AD7213B535D400D2F426 /* CMRectShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMRectShape.m; sourceTree = "<group>"; };
+		5D16AD7313B535D400D2F426 /* CMSegmentShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSegmentShape.h; sourceTree = "<group>"; };
+		5D16AD7413B535D400D2F426 /* CMSegmentShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSegmentShape.m; sourceTree = "<group>"; };
+		5D16AD7513B535D400D2F426 /* CMShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMShape.h; sourceTree = "<group>"; };
+		5D16AD7613B535D400D2F426 /* CMShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMShape.m; sourceTree = "<group>"; };
+		5D16AD7813B535D400D2F426 /* CMSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSprite.h; sourceTree = "<group>"; };
+		5D16AD7913B535D400D2F426 /* CMSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSprite.m; sourceTree = "<group>"; };
+		5D16AD7A13B535D400D2F426 /* SPDebugDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDebugDraw.h; sourceTree = "<group>"; };
+		5D16AD7B13B535D400D2F426 /* SPDebugDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDebugDraw.m; sourceTree = "<group>"; };
+		5D16AD7C13B535D400D2F426 /* SPPoint+Chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPPoint+Chipmunk.h"; sourceTree = "<group>"; };
+		5D16AD7D13B535D400D2F426 /* SPPoint+Chipmunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPPoint+Chipmunk.m"; sourceTree = "<group>"; };
+		5D16AD7F13B535D400D2F426 /* CMInvocationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMInvocationUtils.h; sourceTree = "<group>"; };
+		5D16AD8013B535D400D2F426 /* CMInvocationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMInvocationUtils.m; sourceTree = "<group>"; };
+		5D16ADC713B5360500D2F426 /* libSparrow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSparrow.a; sourceTree = SOURCE_ROOT; };
+		5D16ADC913B5360C00D2F426 /* libChipmunk-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libChipmunk-iPhone.a"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D16AD2313B5352700D2F426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D16ADCA13B5360C00D2F426 /* libChipmunk-iPhone.a in Frameworks */,
+				5D16ADC813B5360500D2F426 /* libSparrow.a in Frameworks */,
+				5D16AD2A13B5352700D2F426 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D16AD1B13B5352700D2F426 = {
+			isa = PBXGroup;
+			children = (
+				5D16ADC913B5360C00D2F426 /* libChipmunk-iPhone.a */,
+				5D16ADC713B5360500D2F426 /* libSparrow.a */,
+				5D16AD2B13B5352700D2F426 /* Classes */,
+				5D16AD2813B5352700D2F426 /* Frameworks */,
+				5D16AD2713B5352700D2F426 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5D16AD2713B5352700D2F426 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD2613B5352700D2F426 /* libChipmunkEx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D16AD2813B5352700D2F426 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD2913B5352700D2F426 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D16AD2B13B5352700D2F426 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD3313B535D400D2F426 /* Callbacks */,
+				5D16AD3813B535D400D2F426 /* ChipmunkManager.h */,
+				5D16AD3913B535D400D2F426 /* CMBody.h */,
+				5D16AD3A13B535D400D2F426 /* CMBody.m */,
+				5D16AD3B13B535D400D2F426 /* CMData.h */,
+				5D16AD3C13B535D400D2F426 /* CMData.m */,
+				5D16AD3D13B535D400D2F426 /* CMMacros.h */,
+				5D16AD3E13B535D400D2F426 /* CMObject.h */,
+				5D16AD3F13B535D400D2F426 /* CMObject.m */,
+				5D16AD4013B535D400D2F426 /* CMSpace.h */,
+				5D16AD4113B535D400D2F426 /* CMSpace.m */,
+				5D16AD4213B535D400D2F426 /* CMTypes.h */,
+				5D16AD4313B535D400D2F426 /* Collision */,
+				5D16AD4A13B535D400D2F426 /* Constraints */,
+				5D16AD6113B535D400D2F426 /* drawSpace.c */,
+				5D16AD6213B535D400D2F426 /* drawSpace.h */,
+				5D16AD6313B535D400D2F426 /* Effects */,
+				5D16AD6613B535D400D2F426 /* Loader */,
+				5D16AD6C13B535D400D2F426 /* Shapes */,
+				5D16AD7713B535D400D2F426 /* Sparrow */,
+				5D16AD7E13B535D400D2F426 /* Utils */,
+				5D16AD2C13B5352700D2F426 /* Supporting Files */,
+			);
+			name = Classes;
+			path = ChipmunkEx;
+			sourceTree = "<group>";
+		};
+		5D16AD2C13B5352700D2F426 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD2D13B5352700D2F426 /* ChipmunkEx-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D16AD3313B535D400D2F426 /* Callbacks */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD3413B535D400D2F426 /* CMPostCallbackHandler.h */,
+				5D16AD3513B535D400D2F426 /* CMPostCallbackHandler.m */,
+				5D16AD3613B535D400D2F426 /* CMQueryFunctionHandler.h */,
+				5D16AD3713B535D400D2F426 /* CMQueryFunctionHandler.m */,
+			);
+			name = Callbacks;
+			path = "../../Chipmunk-Manager/Callbacks";
+			sourceTree = "<group>";
+		};
+		5D16AD4313B535D400D2F426 /* Collision */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD4413B535D400D2F426 /* CMArbiter.h */,
+				5D16AD4513B535D400D2F426 /* CMArbiter.m */,
+				5D16AD4613B535D400D2F426 /* CMCollisionHandler.h */,
+				5D16AD4713B535D400D2F426 /* CMCollisionHandler.m */,
+				5D16AD4813B535D400D2F426 /* CMContactPoint.h */,
+				5D16AD4913B535D400D2F426 /* CMContactPoint.m */,
+			);
+			name = Collision;
+			path = "../../Chipmunk-Manager/Collision";
+			sourceTree = "<group>";
+		};
+		5D16AD4A13B535D400D2F426 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD4B13B535D400D2F426 /* CMConstraint.h */,
+				5D16AD4C13B535D400D2F426 /* CMConstraint.m */,
+				5D16AD4D13B535D400D2F426 /* CMDampedRotarySpringConstraint.h */,
+				5D16AD4E13B535D400D2F426 /* CMDampedRotarySpringConstraint.m */,
+				5D16AD4F13B535D400D2F426 /* CMDampedSpringConstraint.h */,
+				5D16AD5013B535D400D2F426 /* CMDampedSpringConstraint.m */,
+				5D16AD5113B535D400D2F426 /* CMGearJointConstraint.h */,
+				5D16AD5213B535D400D2F426 /* CMGearJointConstraint.m */,
+				5D16AD5313B535D400D2F426 /* CMGrooveJointConstraint.h */,
+				5D16AD5413B535D400D2F426 /* CMGrooveJointConstraint.m */,
+				5D16AD5513B535D400D2F426 /* CMPinJointConstraint.h */,
+				5D16AD5613B535D400D2F426 /* CMPinJointConstraint.m */,
+				5D16AD5713B535D400D2F426 /* CMPivotJointConstraint.h */,
+				5D16AD5813B535D400D2F426 /* CMPivotJointConstraint.m */,
+				5D16AD5913B535D400D2F426 /* CMRatchetJointConstraint.h */,
+				5D16AD5A13B535D400D2F426 /* CMRatchetJointConstraint.m */,
+				5D16AD5B13B535D400D2F426 /* CMRotaryLimitConstraint.h */,
+				5D16AD5C13B535D400D2F426 /* CMRotaryLimitConstraint.m */,
+				5D16AD5D13B535D400D2F426 /* CMSimpleMotorConstraint.h */,
+				5D16AD5E13B535D400D2F426 /* CMSimpleMotorConstraint.m */,
+				5D16AD5F13B535D400D2F426 /* CMSlideJointConstraint.h */,
+				5D16AD6013B535D400D2F426 /* CMSlideJointConstraint.m */,
+			);
+			name = Constraints;
+			path = "../../Chipmunk-Manager/Constraints";
+			sourceTree = "<group>";
+		};
+		5D16AD6313B535D400D2F426 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD6413B535D400D2F426 /* CMBlastEffect.h */,
+				5D16AD6513B535D400D2F426 /* CMBlastEffect.m */,
+			);
+			name = Effects;
+			path = "../../Chipmunk-Manager/Effects";
+			sourceTree = "<group>";
+		};
+		5D16AD6613B535D400D2F426 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD6713B535D400D2F426 /* CMDefaultLoader.h */,
+				5D16AD6813B535D400D2F426 /* CMDefaultLoader.m */,
+				5D16AD6913B535D400D2F426 /* CMLoaderListenerProtocol.h */,
+				5D16AD6A13B535D400D2F426 /* CMPhysicsEditorLoader.h */,
+				5D16AD6B13B535D400D2F426 /* CMPhysicsEditorLoader.m */,
+			);
+			name = Loader;
+			path = "../../Chipmunk-Manager/Loader";
+			sourceTree = "<group>";
+		};
+		5D16AD6C13B535D400D2F426 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD6D13B535D400D2F426 /* CMCircleShape.h */,
+				5D16AD6E13B535D400D2F426 /* CMCircleShape.m */,
+				5D16AD6F13B535D400D2F426 /* CMPolyShape.h */,
+				5D16AD7013B535D400D2F426 /* CMPolyShape.m */,
+				5D16AD7113B535D400D2F426 /* CMRectShape.h */,
+				5D16AD7213B535D400D2F426 /* CMRectShape.m */,
+				5D16AD7313B535D400D2F426 /* CMSegmentShape.h */,
+				5D16AD7413B535D400D2F426 /* CMSegmentShape.m */,
+				5D16AD7513B535D400D2F426 /* CMShape.h */,
+				5D16AD7613B535D400D2F426 /* CMShape.m */,
+			);
+			name = Shapes;
+			path = "../../Chipmunk-Manager/Shapes";
+			sourceTree = "<group>";
+		};
+		5D16AD7713B535D400D2F426 /* Sparrow */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD7813B535D400D2F426 /* CMSprite.h */,
+				5D16AD7913B535D400D2F426 /* CMSprite.m */,
+				5D16AD7A13B535D400D2F426 /* SPDebugDraw.h */,
+				5D16AD7B13B535D400D2F426 /* SPDebugDraw.m */,
+				5D16AD7C13B535D400D2F426 /* SPPoint+Chipmunk.h */,
+				5D16AD7D13B535D400D2F426 /* SPPoint+Chipmunk.m */,
+			);
+			name = Sparrow;
+			path = "../../Chipmunk-Manager/Sparrow";
+			sourceTree = "<group>";
+		};
+		5D16AD7E13B535D400D2F426 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AD7F13B535D400D2F426 /* CMInvocationUtils.h */,
+				5D16AD8013B535D400D2F426 /* CMInvocationUtils.m */,
+			);
+			name = Utils;
+			path = "../../Chipmunk-Manager/Utils";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5D16AD2413B5352700D2F426 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D16AD8113B535D400D2F426 /* CMPostCallbackHandler.h in Headers */,
+				5D16AD8313B535D400D2F426 /* CMQueryFunctionHandler.h in Headers */,
+				5D16AD8513B535D400D2F426 /* ChipmunkManager.h in Headers */,
+				5D16AD8613B535D400D2F426 /* CMBody.h in Headers */,
+				5D16AD8813B535D400D2F426 /* CMData.h in Headers */,
+				5D16AD8A13B535D400D2F426 /* CMMacros.h in Headers */,
+				5D16AD8B13B535D400D2F426 /* CMObject.h in Headers */,
+				5D16AD8D13B535D400D2F426 /* CMSpace.h in Headers */,
+				5D16AD8F13B535D400D2F426 /* CMTypes.h in Headers */,
+				5D16AD9013B535D400D2F426 /* CMArbiter.h in Headers */,
+				5D16AD9213B535D400D2F426 /* CMCollisionHandler.h in Headers */,
+				5D16AD9413B535D400D2F426 /* CMContactPoint.h in Headers */,
+				5D16AD9613B535D400D2F426 /* CMConstraint.h in Headers */,
+				5D16AD9813B535D400D2F426 /* CMDampedRotarySpringConstraint.h in Headers */,
+				5D16AD9A13B535D400D2F426 /* CMDampedSpringConstraint.h in Headers */,
+				5D16AD9C13B535D400D2F426 /* CMGearJointConstraint.h in Headers */,
+				5D16AD9E13B535D400D2F426 /* CMGrooveJointConstraint.h in Headers */,
+				5D16ADA013B535D400D2F426 /* CMPinJointConstraint.h in Headers */,
+				5D16ADA213B535D400D2F426 /* CMPivotJointConstraint.h in Headers */,
+				5D16ADA413B535D400D2F426 /* CMRatchetJointConstraint.h in Headers */,
+				5D16ADA613B535D400D2F426 /* CMRotaryLimitConstraint.h in Headers */,
+				5D16ADA813B535D400D2F426 /* CMSimpleMotorConstraint.h in Headers */,
+				5D16ADAA13B535D400D2F426 /* CMSlideJointConstraint.h in Headers */,
+				5D16ADAD13B535D400D2F426 /* drawSpace.h in Headers */,
+				5D16ADAE13B535D400D2F426 /* CMBlastEffect.h in Headers */,
+				5D16ADB013B535D400D2F426 /* CMDefaultLoader.h in Headers */,
+				5D16ADB213B535D400D2F426 /* CMLoaderListenerProtocol.h in Headers */,
+				5D16ADB313B535D400D2F426 /* CMPhysicsEditorLoader.h in Headers */,
+				5D16ADB513B535D400D2F426 /* CMCircleShape.h in Headers */,
+				5D16ADB713B535D400D2F426 /* CMPolyShape.h in Headers */,
+				5D16ADB913B535D400D2F426 /* CMRectShape.h in Headers */,
+				5D16ADBB13B535D400D2F426 /* CMSegmentShape.h in Headers */,
+				5D16ADBD13B535D400D2F426 /* CMShape.h in Headers */,
+				5D16ADBF13B535D400D2F426 /* CMSprite.h in Headers */,
+				5D16ADC113B535D400D2F426 /* SPDebugDraw.h in Headers */,
+				5D16ADC313B535D400D2F426 /* SPPoint+Chipmunk.h in Headers */,
+				5D16ADC513B535D400D2F426 /* CMInvocationUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5D16AD2513B5352700D2F426 /* ChipmunkEx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D16AD3013B5352700D2F426 /* Build configuration list for PBXNativeTarget "ChipmunkEx" */;
+			buildPhases = (
+				5D16AD2213B5352700D2F426 /* Sources */,
+				5D16AD2313B5352700D2F426 /* Frameworks */,
+				5D16AD2413B5352700D2F426 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChipmunkEx;
+			productName = ChipmunkEx;
+			productReference = 5D16AD2613B5352700D2F426 /* libChipmunkEx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D16AD1D13B5352700D2F426 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 5D16AD2013B5352700D2F426 /* Build configuration list for PBXProject "ChipmunkEx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5D16AD1B13B5352700D2F426;
+			productRefGroup = 5D16AD2713B5352700D2F426 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D16AD2513B5352700D2F426 /* ChipmunkEx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D16AD2213B5352700D2F426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D16AD8213B535D400D2F426 /* CMPostCallbackHandler.m in Sources */,
+				5D16AD8413B535D400D2F426 /* CMQueryFunctionHandler.m in Sources */,
+				5D16AD8713B535D400D2F426 /* CMBody.m in Sources */,
+				5D16AD8913B535D400D2F426 /* CMData.m in Sources */,
+				5D16AD8C13B535D400D2F426 /* CMObject.m in Sources */,
+				5D16AD8E13B535D400D2F426 /* CMSpace.m in Sources */,
+				5D16AD9113B535D400D2F426 /* CMArbiter.m in Sources */,
+				5D16AD9313B535D400D2F426 /* CMCollisionHandler.m in Sources */,
+				5D16AD9513B535D400D2F426 /* CMContactPoint.m in Sources */,
+				5D16AD9713B535D400D2F426 /* CMConstraint.m in Sources */,
+				5D16AD9913B535D400D2F426 /* CMDampedRotarySpringConstraint.m in Sources */,
+				5D16AD9B13B535D400D2F426 /* CMDampedSpringConstraint.m in Sources */,
+				5D16AD9D13B535D400D2F426 /* CMGearJointConstraint.m in Sources */,
+				5D16AD9F13B535D400D2F426 /* CMGrooveJointConstraint.m in Sources */,
+				5D16ADA113B535D400D2F426 /* CMPinJointConstraint.m in Sources */,
+				5D16ADA313B535D400D2F426 /* CMPivotJointConstraint.m in Sources */,
+				5D16ADA513B535D400D2F426 /* CMRatchetJointConstraint.m in Sources */,
+				5D16ADA713B535D400D2F426 /* CMRotaryLimitConstraint.m in Sources */,
+				5D16ADA913B535D400D2F426 /* CMSimpleMotorConstraint.m in Sources */,
+				5D16ADAB13B535D400D2F426 /* CMSlideJointConstraint.m in Sources */,
+				5D16ADAC13B535D400D2F426 /* drawSpace.c in Sources */,
+				5D16ADAF13B535D400D2F426 /* CMBlastEffect.m in Sources */,
+				5D16ADB113B535D400D2F426 /* CMDefaultLoader.m in Sources */,
+				5D16ADB413B535D400D2F426 /* CMPhysicsEditorLoader.m in Sources */,
+				5D16ADB613B535D400D2F426 /* CMCircleShape.m in Sources */,
+				5D16ADB813B535D400D2F426 /* CMPolyShape.m in Sources */,
+				5D16ADBA13B535D400D2F426 /* CMRectShape.m in Sources */,
+				5D16ADBC13B535D400D2F426 /* CMSegmentShape.m in Sources */,
+				5D16ADBE13B535D400D2F426 /* CMShape.m in Sources */,
+				5D16ADC013B535D400D2F426 /* CMSprite.m in Sources */,
+				5D16ADC213B535D400D2F426 /* SPDebugDraw.m in Sources */,
+				5D16ADC413B535D400D2F426 /* SPPoint+Chipmunk.m in Sources */,
+				5D16ADC613B535D400D2F426 /* CMInvocationUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5D16AD2E13B5352700D2F426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5D16AD2F13B5352700D2F426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		5D16AD3113B5352700D2F426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/ChipmunkEx.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChipmunkEx/ChipmunkEx-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(CHIPMUNK_SRC)/** $(SPARROW_SRC)/**";
+			};
+			name = Debug;
+		};
+		5D16AD3213B5352700D2F426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/ChipmunkEx.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChipmunkEx/ChipmunkEx-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(CHIPMUNK_SRC)/** $(SPARROW_SRC)/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D16AD2013B5352700D2F426 /* Build configuration list for PBXProject "ChipmunkEx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D16AD2E13B5352700D2F426 /* Debug */,
+				5D16AD2F13B5352700D2F426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D16AD3013B5352700D2F426 /* Build configuration list for PBXNativeTarget "ChipmunkEx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D16AD3113B5352700D2F426 /* Debug */,
+				5D16AD3213B5352700D2F426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D16AD1D13B5352700D2F426 /* Project object */;
+}

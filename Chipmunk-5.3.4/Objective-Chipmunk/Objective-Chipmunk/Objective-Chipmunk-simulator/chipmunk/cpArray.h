@@ -18,15 +18,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
+ 
+// NOTE: cpArray is rarely used and will probably go away.
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+typedef struct cpArray{
+	CP_PRIVATE(int num);
+	CP_PRIVATE(int max);
+	CP_PRIVATE(void **arr);
+} cpArray;
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+typedef void (*cpArrayIter)(void *ptr, void *data);
+
+cpArray *cpArrayAlloc(void);
+cpArray *cpArrayInit(cpArray *arr, int size);
+cpArray *cpArrayNew(int size);
+
+void cpArrayDestroy(cpArray *arr);
+void cpArrayFree(cpArray *arr);
+
+void cpArrayClear(cpArray *arr);
+
+void cpArrayPush(cpArray *arr, void *object);
+void *cpArrayPop(cpArray *arr);
+void cpArrayDeleteIndex(cpArray *arr, int idx);
+void cpArrayDeleteObj(cpArray *arr, void *obj);
+
+void cpArrayAppend(cpArray *arr, cpArray *other);
+
+void cpArrayEach(cpArray *arr, cpArrayIter iterFunc, void *data);
+cpBool cpArrayContains(cpArray *arr, void *ptr);

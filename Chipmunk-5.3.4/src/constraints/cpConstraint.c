@@ -18,15 +18,37 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+#include <stdlib.h>
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+#include "chipmunk_private.h"
+#include "constraints/util.h"
+
+// TODO: Comment me!
+
+cpFloat cp_constraint_bias_coef = 0.1f;
+
+void cpConstraintDestroy(cpConstraint *constraint){}
+
+void
+cpConstraintFree(cpConstraint *constraint)
+{
+	if(constraint){
+		cpConstraintDestroy(constraint);
+		cpfree(constraint);
+	}
+}
+
+// *** defined in util.h
+
+void
+cpConstraintInit(cpConstraint *constraint, const cpConstraintClass *klass, cpBody *a, cpBody *b)
+{
+	constraint->klass = klass;
+	constraint->a = a;
+	constraint->b = b;
+	
+	constraint->maxForce = (cpFloat)INFINITY;
+	constraint->biasCoef = cp_constraint_bias_coef;
+	constraint->maxBias = (cpFloat)INFINITY;
+}

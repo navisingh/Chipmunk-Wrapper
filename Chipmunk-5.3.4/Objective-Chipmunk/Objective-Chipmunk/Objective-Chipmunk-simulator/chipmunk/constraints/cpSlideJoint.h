@@ -18,15 +18,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+const cpConstraintClass *cpSlideJointGetClass();
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+typedef struct cpSlideJoint {
+	cpConstraint constraint;
+	cpVect anchr1, anchr2;
+	cpFloat min, max;
+	
+	cpVect r1, r2;
+	cpVect n;
+	cpFloat nMass;
+	
+	cpFloat jnAcc, jnMax;
+	cpFloat bias;
+} cpSlideJoint;
+
+cpSlideJoint *cpSlideJointAlloc(void);
+cpSlideJoint *cpSlideJointInit(cpSlideJoint *joint, cpBody *a, cpBody *b, cpVect anchr1, cpVect anchr2, cpFloat min, cpFloat max);
+cpConstraint *cpSlideJointNew(cpBody *a, cpBody *b, cpVect anchr1, cpVect anchr2, cpFloat min, cpFloat max);
+
+CP_DefineConstraintProperty(cpSlideJoint, cpVect, anchr1, Anchr1);
+CP_DefineConstraintProperty(cpSlideJoint, cpVect, anchr2, Anchr2);
+CP_DefineConstraintProperty(cpSlideJoint, cpFloat, min, Min);
+CP_DefineConstraintProperty(cpSlideJoint, cpFloat, max, Max);

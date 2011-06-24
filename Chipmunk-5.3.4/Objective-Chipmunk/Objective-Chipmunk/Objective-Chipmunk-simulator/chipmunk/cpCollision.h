@@ -18,15 +18,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+//TODO delete this header?
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+// Collides two cpShape structures.
+// Returns the number of contact points added to arr
+// which should be at least CP_MAX_CONTACTS_PER_ARBITER in length.
+// This function is very lonely in this header :(
+int cpCollideShapes(const cpShape *a, const cpShape *b, cpContact *arr);

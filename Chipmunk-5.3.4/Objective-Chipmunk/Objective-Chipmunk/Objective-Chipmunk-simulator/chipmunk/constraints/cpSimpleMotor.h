@@ -18,15 +18,20 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
+const cpConstraintClass *cpSimpleMotorGetClass();
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+typedef struct cpSimpleMotor {
+	cpConstraint constraint;
+	cpFloat rate;
+	
+	cpFloat iSum;
+		
+	cpFloat jAcc, jMax;
+} cpSimpleMotor;
+
+cpSimpleMotor *cpSimpleMotorAlloc(void);
+cpSimpleMotor *cpSimpleMotorInit(cpSimpleMotor *joint, cpBody *a, cpBody *b, cpFloat rate);
+cpConstraint *cpSimpleMotorNew(cpBody *a, cpBody *b, cpFloat rate);
+
+CP_DefineConstraintProperty(cpSimpleMotor, cpFloat, rate, Rate);

@@ -18,15 +18,37 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#import "Chipmunk.h"
 
-typedef struct drawSpaceOptions {
-	int drawHash;
-	int drawBBs;
-	int drawShapes;
-	float collisionPointSize;
-	float bodyPointSize;
-	float lineThickness;
-} drawSpaceOptions;
 
-void drawSpace(cpSpace *space);//, drawSpaceOptions *options);
+
+/* This header defines a number of "unsafe" operations on Chipmunk objects.
+ * In this case "unsafe" is referring to operations which may reduce the
+ * physical accuracy or numerical stability of the simulation, but will not
+ * cause crashes.
+ *
+ * The prime example is mutating collision shapes. Chipmunk does not support
+ * this directly. Mutating shapes using this API will caused objects in contact
+ * to be pushed apart using Chipmunk's overlap solver, but not using real
+ * persistent velocities. Probably not what you meant, but perhaps close enough.
+ */
+
+#ifndef CHIPMUNK_UNSAFE_HEADER
+#define CHIPMUNK_UNSAFE_HEADER
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+void cpCircleShapeSetRadius(cpShape *shape, cpFloat radius);
+void cpCircleShapeSetOffset(cpShape *shape, cpVect offset);
+
+void cpSegmentShapeSetEndpoints(cpShape *shape, cpVect a, cpVect b);
+void cpSegmentShapeSetRadius(cpShape *shape, cpFloat radius);
+
+void cpPolyShapeSetVerts(cpShape *shape, int numVerts, cpVect *verts, cpVect offset);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

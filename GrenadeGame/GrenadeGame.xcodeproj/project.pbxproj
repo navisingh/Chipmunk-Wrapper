@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D16AE5313B5538400D2F426 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AE5213B5538400D2F426 /* UIKit.framework */; };
+		5D16AE5513B5538400D2F426 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AE5413B5538400D2F426 /* Foundation.framework */; };
+		5D16AE5713B5538400D2F426 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AE5613B5538400D2F426 /* CoreGraphics.framework */; };
+		5D16AE5D13B5538400D2F426 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D16AE5B13B5538400D2F426 /* InfoPlist.strings */; };
+		5D16AE6013B5538400D2F426 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AE5F13B5538400D2F426 /* main.m */; };
+		5D16AE6313B5538400D2F426 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AE6213B5538400D2F426 /* AppDelegate.mm */; };
+		5D16AE6913B5538400D2F426 /* AppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AE6813B5538400D2F426 /* AppViewController.mm */; };
+		5D16AE8F13B558E500D2F426 /* Game.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AE8E13B558E500D2F426 /* Game.mm */; };
+		5D16AE9313B55AFB00D2F426 /* Utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AE9213B55AFB00D2F426 /* Utils.mm */; };
+		5D16AE9613B55B9C00D2F426 /* Stage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AE9513B55B9C00D2F426 /* Stage.mm */; };
+		5D16AE9913B55CCE00D2F426 /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AE9813B55CCD00D2F426 /* Scene.mm */; };
+		5D16AE9C13B55FD900D2F426 /* SceneMain.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AE9B13B55FD800D2F426 /* SceneMain.mm */; };
+		5D16AE9F13B55FED00D2F426 /* SceneSettings.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D16AE9E13B55FED00D2F426 /* SceneSettings.mm */; };
+		5D16AEA313B560FC00D2F426 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AEA213B560FC00D2F426 /* libz.dylib */; };
+		5D16AEA513B5615700D2F426 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AEA413B5615700D2F426 /* QuartzCore.framework */; };
+		5D16AEA713B5616000D2F426 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AEA613B5616000D2F426 /* OpenGLES.framework */; };
+		5D16AEA913B5616800D2F426 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AEA813B5616700D2F426 /* OpenAL.framework */; };
+		5D16AEAB13B5617500D2F426 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AEAA13B5617400D2F426 /* AVFoundation.framework */; };
+		5D16AEAD13B5617C00D2F426 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AEAC13B5617C00D2F426 /* AudioToolbox.framework */; };
+		5D16AEB113B653B500D2F426 /* libChipmunkEx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16AEB013B653B500D2F426 /* libChipmunkEx.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D16AE4E13B5538400D2F426 /* GrenadeGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrenadeGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D16AE5213B5538400D2F426 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5D16AE5413B5538400D2F426 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5D16AE5613B5538400D2F426 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5D16AE5A13B5538400D2F426 /* GrenadeGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GrenadeGame-Info.plist"; sourceTree = "<group>"; };
+		5D16AE5C13B5538400D2F426 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5D16AE5E13B5538400D2F426 /* GrenadeGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrenadeGame-Prefix.pch"; sourceTree = "<group>"; };
+		5D16AE5F13B5538400D2F426 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D16AE6113B5538400D2F426 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5D16AE6213B5538400D2F426 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		5D16AE6713B5538400D2F426 /* AppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
+		5D16AE6813B5538400D2F426 /* AppViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppViewController.mm; sourceTree = "<group>"; };
+		5D16AE8D13B558E500D2F426 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		5D16AE8E13B558E500D2F426 /* Game.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Game.mm; sourceTree = "<group>"; };
+		5D16AE9013B559DE00D2F426 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		5D16AE9113B55AFB00D2F426 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		5D16AE9213B55AFB00D2F426 /* Utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Utils.mm; sourceTree = "<group>"; };
+		5D16AE9413B55B9C00D2F426 /* Stage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage.h; sourceTree = "<group>"; };
+		5D16AE9513B55B9C00D2F426 /* Stage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Stage.mm; sourceTree = "<group>"; };
+		5D16AE9713B55CCD00D2F426 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		5D16AE9813B55CCD00D2F426 /* Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
+		5D16AE9A13B55FD800D2F426 /* SceneMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneMain.h; sourceTree = "<group>"; };
+		5D16AE9B13B55FD800D2F426 /* SceneMain.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneMain.mm; sourceTree = "<group>"; };
+		5D16AE9D13B55FED00D2F426 /* SceneSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneSettings.h; sourceTree = "<group>"; };
+		5D16AE9E13B55FED00D2F426 /* SceneSettings.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneSettings.mm; sourceTree = "<group>"; };
+		5D16AEA213B560FC00D2F426 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		5D16AEA413B5615700D2F426 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5D16AEA613B5616000D2F426 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		5D16AEA813B5616700D2F426 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		5D16AEAA13B5617400D2F426 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5D16AEAC13B5617C00D2F426 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5D16AEB013B653B500D2F426 /* libChipmunkEx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libChipmunkEx.a; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D16AE4B13B5538400D2F426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D16AEB113B653B500D2F426 /* libChipmunkEx.a in Frameworks */,
+				5D16AEA313B560FC00D2F426 /* libz.dylib in Frameworks */,
+				5D16AE5313B5538400D2F426 /* UIKit.framework in Frameworks */,
+				5D16AE5513B5538400D2F426 /* Foundation.framework in Frameworks */,
+				5D16AE5713B5538400D2F426 /* CoreGraphics.framework in Frameworks */,
+				5D16AEAD13B5617C00D2F426 /* AudioToolbox.framework in Frameworks */,
+				5D16AEAB13B5617500D2F426 /* AVFoundation.framework in Frameworks */,
+				5D16AEA913B5616800D2F426 /* OpenAL.framework in Frameworks */,
+				5D16AEA713B5616000D2F426 /* OpenGLES.framework in Frameworks */,
+				5D16AEA513B5615700D2F426 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D16AE4313B5538400D2F426 = {
+			isa = PBXGroup;
+			children = (
+				5D16AEB013B653B500D2F426 /* libChipmunkEx.a */,
+				5D16AE5813B5538400D2F426 /* Classes */,
+				5D16AE5113B5538400D2F426 /* Frameworks */,
+				5D16AE4F13B5538400D2F426 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5D16AE4F13B5538400D2F426 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AE4E13B5538400D2F426 /* GrenadeGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D16AE5113B5538400D2F426 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AEAC13B5617C00D2F426 /* AudioToolbox.framework */,
+				5D16AEAA13B5617400D2F426 /* AVFoundation.framework */,
+				5D16AEA813B5616700D2F426 /* OpenAL.framework */,
+				5D16AEA613B5616000D2F426 /* OpenGLES.framework */,
+				5D16AEA413B5615700D2F426 /* QuartzCore.framework */,
+				5D16AEA213B560FC00D2F426 /* libz.dylib */,
+				5D16AE5213B5538400D2F426 /* UIKit.framework */,
+				5D16AE5413B5538400D2F426 /* Foundation.framework */,
+				5D16AE5613B5538400D2F426 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D16AE5813B5538400D2F426 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AE9013B559DE00D2F426 /* Macros.h */,
+				5D16AE6113B5538400D2F426 /* AppDelegate.h */,
+				5D16AE6213B5538400D2F426 /* AppDelegate.mm */,
+				5D16AE6713B5538400D2F426 /* AppViewController.h */,
+				5D16AE6813B5538400D2F426 /* AppViewController.mm */,
+				5D16AE9A13B55FD800D2F426 /* SceneMain.h */,
+				5D16AE9B13B55FD800D2F426 /* SceneMain.mm */,
+				5D16AE9D13B55FED00D2F426 /* SceneSettings.h */,
+				5D16AE9E13B55FED00D2F426 /* SceneSettings.mm */,
+				5D16AE5913B5538400D2F426 /* Supporting Files */,
+				5D16AE8D13B558E500D2F426 /* Game.h */,
+				5D16AE8E13B558E500D2F426 /* Game.mm */,
+				5D16AE9713B55CCD00D2F426 /* Scene.h */,
+				5D16AE9813B55CCD00D2F426 /* Scene.mm */,
+				5D16AE9413B55B9C00D2F426 /* Stage.h */,
+				5D16AE9513B55B9C00D2F426 /* Stage.mm */,
+				5D16AE9113B55AFB00D2F426 /* Utils.h */,
+				5D16AE9213B55AFB00D2F426 /* Utils.mm */,
+			);
+			name = Classes;
+			path = GrenadeGame;
+			sourceTree = "<group>";
+		};
+		5D16AE5913B5538400D2F426 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D16AE5A13B5538400D2F426 /* GrenadeGame-Info.plist */,
+				5D16AE5B13B5538400D2F426 /* InfoPlist.strings */,
+				5D16AE5E13B5538400D2F426 /* GrenadeGame-Prefix.pch */,
+				5D16AE5F13B5538400D2F426 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D16AE4D13B5538400D2F426 /* GrenadeGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D16AE6F13B5538400D2F426 /* Build configuration list for PBXNativeTarget "GrenadeGame" */;
+			buildPhases = (
+				5D16AE4A13B5538400D2F426 /* Sources */,
+				5D16AE4B13B5538400D2F426 /* Frameworks */,
+				5D16AE4C13B5538400D2F426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrenadeGame;
+			productName = GrenadeGame;
+			productReference = 5D16AE4E13B5538400D2F426 /* GrenadeGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D16AE4513B5538400D2F426 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 5D16AE4813B5538400D2F426 /* Build configuration list for PBXProject "GrenadeGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5D16AE4313B5538400D2F426;
+			productRefGroup = 5D16AE4F13B5538400D2F426 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D16AE4D13B5538400D2F426 /* GrenadeGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D16AE4C13B5538400D2F426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D16AE5D13B5538400D2F426 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D16AE4A13B5538400D2F426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D16AE6013B5538400D2F426 /* main.m in Sources */,
+				5D16AE6313B5538400D2F426 /* AppDelegate.mm in Sources */,
+				5D16AE6913B5538400D2F426 /* AppViewController.mm in Sources */,
+				5D16AE8F13B558E500D2F426 /* Game.mm in Sources */,
+				5D16AE9313B55AFB00D2F426 /* Utils.mm in Sources */,
+				5D16AE9613B55B9C00D2F426 /* Stage.mm in Sources */,
+				5D16AE9913B55CCE00D2F426 /* Scene.mm in Sources */,
+				5D16AE9C13B55FD900D2F426 /* SceneMain.mm in Sources */,
+				5D16AE9F13B55FED00D2F426 /* SceneSettings.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5D16AE5B13B5538400D2F426 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D16AE5C13B5538400D2F426 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D16AE6D13B5538400D2F426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5D16AE6E13B5538400D2F426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		5D16AE7013B5538400D2F426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GrenadeGame/GrenadeGame-Prefix.pch";
+				INFOPLIST_FILE = "GrenadeGame/GrenadeGame-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-weak_framework",
+					iAd,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(CHIPMUNK_WRAPPER)/** $(SPARROW_SRC)/** $(CHIPMUNK_SRC)/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5D16AE7113B5538400D2F426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GrenadeGame/GrenadeGame-Prefix.pch";
+				INFOPLIST_FILE = "GrenadeGame/GrenadeGame-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-weak_framework",
+					iAd,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(CHIPMUNK_WRAPPER)/** $(SPARROW_SRC)/** $(CHIPMUNK_SRC)/**";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D16AE4813B5538400D2F426 /* Build configuration list for PBXProject "GrenadeGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D16AE6D13B5538400D2F426 /* Debug */,
+				5D16AE6E13B5538400D2F426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D16AE6F13B5538400D2F426 /* Build configuration list for PBXNativeTarget "GrenadeGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D16AE7013B5538400D2F426 /* Debug */,
+				5D16AE7113B5538400D2F426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D16AE4513B5538400D2F426 /* Project object */;
+}

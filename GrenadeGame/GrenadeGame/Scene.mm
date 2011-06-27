@@ -31,6 +31,25 @@
     return [self init];
 }
 
+- (id)init 
+{
+	[super init];
+    
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    height_ = screenSize.height;
+    width_ = screenSize.width;
+    
+    
+    SPQuad *quad = [SPQuad quadWithWidth:width_ height:height_];
+    quad.color = 0x00ff00;
+    quad.x = 0;
+    quad.y = 0;
+    [self addChild:quad];    
+    
+	return self;
+}
+
+
 - (void)setupScene:(Stage *) gs height:(int)h width:(int)w
 {
     stage_ = gs;
@@ -40,11 +59,6 @@
 	//note: only the game stage has nativeView set.
     sparrowView_ = (UIView *)stage_.stage.nativeView;
 	
-    SPQuad *quad = [SPQuad quadWithWidth:w height:h];
-    quad.color = 0x00ff00;
-    quad.x = 0;
-    quad.y = 0;
-    [self addChild:quad];    
 }
 
 - (void) sceneWillAppear:(Scene *)hide

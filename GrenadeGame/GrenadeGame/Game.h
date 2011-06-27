@@ -15,7 +15,9 @@
 @interface Game : Stage {
 	SceneSettings *settingsScene_;
 	SceneMain *mainScene_;
+    SPSprite *pivot_;
 }
+
 @property (nonatomic, retain) SceneSettings *settingsScene;
 @property (nonatomic, retain) SceneMain *mainScene;
 

@@ -32,12 +32,12 @@
 
 - (id)init 
 {
-	[super init];
-    
-    CGRect  rect = [[UIScreen mainScreen] bounds];
-    height_ = rect.size.height;
-    width_ = rect.size.width;
-	
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    height_ = screenSize.height;
+    width_ = screenSize.width;
+        
+    [super init];
+
 	return self;
 }
 

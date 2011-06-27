@@ -14,8 +14,8 @@
 
 @interface Stage : SPStage  <NSCoding> 
 {
-    short height_;
-    short width_;
+    float height_;
+    float width_;
     UIViewController *viewController_;
     std::vector<Scene *> vecScenes_;
 }

@@ -11,7 +11,6 @@
 #import "SceneMain.h"
 #import "SceneSettings.h"
 
-
 @interface Game ()
 - (id) initWithDefaults;
 - (void) didAttachStageToView;
@@ -61,6 +60,15 @@
 {
 	[super init];
     
+    pivot_ = [[SPSprite alloc] init];
+    [self addChild:pivot_];
+    
+    pivot_.x = 0;
+    pivot_.y = height_;
+    pivot_.rotation = SP_D2R(-90);
+    pivot_.scaleY = width_ / height_;
+    pivot_.scaleX = height_ / width_;
+    
 	return self;
 }
 
@@ -68,18 +76,15 @@
 {
 	NSLog(@"%s", __PRETTY_FUNCTION__);
     
-    CGRect  rect = [[UIScreen mainScreen] bounds];
-    height_ = rect.size.height;
-    width_ = rect.size.width;
-    
     [self setupScenesWithHeight:height_ width:width_];
 
-    [self addChild:settingsScene_];
+    [pivot_ addChild:settingsScene_];
     settingsScene_.visible = false;
     
-    [self addChild:mainScene_];
+    [pivot_ addChild:mainScene_];
 	mainScene_.visible = true;
 }
+
 
 #define ARCHIVE_FILE @"settings.data"
 
@@ -93,19 +98,19 @@
 {
 	if ([game isKindOfClass:[Game class]])
         [(Game *)game archiveData];
-    //		[NSKeyedArchiver archiveRootObject:(StageGame *)game toFile:pathInDocumentDirectory(@"settings.data")];	
 }
 
 + (Game *)stageWithController:(UIViewController *)controller
-                              view:(SPView *)view
+                         view:(SPView *)view
 {    
+    [[UIApplication sharedApplication] setStatusBarOrientation: UIInterfaceOrientationLandscapeRight];
+    
 	Game *game;
     game = [[NSKeyedUnarchiver unarchiveObjectWithFile:pathInDocumentDirectory(ARCHIVE_FILE)] retain];
 	if (!game)
 		game = [[Game alloc] initWithDefaults];
 	view.stage = game; //bumps retain count 
     game.viewController = controller;
-
     
 	[game didAttachStageToView]; //to work around _SET_STAGE notification bug.
     

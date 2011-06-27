@@ -34,9 +34,11 @@
 - (void)loadView 
 {
     [super loadView];
+
 	CGRect  frame = [[UIScreen mainScreen] bounds];
-    
     sparrowView_ = [ [ [SPView alloc] initWithFrame:frame] autorelease];
+    sparrowView_.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+    sparrowView_.contentMode = UIViewContentModeScaleAspectFit;
     sparrowView_.clipsToBounds = YES;
     [[self view] addSubview: sparrowView_];	
 }
@@ -50,13 +52,12 @@
 	SP_CREATE_POOL(pool);
 	[SPStage setSupportHighResolutions:YES];
 	
-    
     NSArray *subviews = [sparrowView_ subviews];
     if ([subviews count] == 0) {
         Game *game = [Game stageWithController:self view:sparrowView_];
     }
 	
-	sparrowView_.frameRate = 30.0f;
+	sparrowView_.frameRate = SPARROW_FRAMERATE_ACTIVE;
     //	[SPAudioEngine start];
     //    [SPAudioEngine start:SPAudioSessionCategory_AmbientSound];
 	
@@ -109,7 +110,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     [sparrowView_ stop];
-	sparrowView_.frameRate = 5;
+	sparrowView_.frameRate = SPARROW_FRAMERATE_INACTIVE;
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -123,7 +124,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-	sparrowView_.frameRate = 30;
+	sparrowView_.frameRate = SPARROW_FRAMERATE_ACTIVE;
 	[sparrowView_ start];
 }
 

@@ -26,5 +26,6 @@
 - (void) sceneWillDisappear:(Scene *)show;
 - (void) sceneDidAppear;
 - (void) sceneDidDisappear;
+- (void) onOrientationChange:(UIInterfaceOrientation)orientation;
 
 @end

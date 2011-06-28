@@ -78,6 +78,10 @@
 {
     
 }
+- (void) onOrientationChange:(UIInterfaceOrientation)orientation
+{
+    
+}
 
 
 @end

@@ -9,7 +9,8 @@
 #import "SceneMain.h"
 #import "SceneSettings.h"
 #import "Game.h"
-#include "SPDebugDraw.h"
+#import "SPDebugDraw.h"
+#import "BEDisplayDebugger.h"
 
 
 #define TANK_COLLISION_TYPE @"tank"
@@ -27,7 +28,7 @@
 
 - (void) setupChipmunkSpace;
 - (void) initializeChipmunkObjects;
-- (void) createConsole;
+- (void) createConsole:(SPSprite *)obj;
 - (void) loadPlayer;
 - (void) addCrate:(int)xPos yPos:(int)yPos;
 
@@ -61,9 +62,35 @@
 {
 	[super init];
 
-    // Add the two thumbsticks
-    [self createConsole];
+//    BEDisplayDebugger *debugger = [BEDisplayDebugger debuggerWithLevels:3];
+//    [self addChild:debugger];
+
+    // Add a container in landscape mode
+    mContents = [SPSprite sprite];
+    mContents = [[SPSprite alloc] init];
     
+    mContents.rotation = SP_D2R(90);
+    mContents.x = width_;
+    [self addChild:mContents];
+    
+    if (1) {
+        SHThumbstick *ts = [SHThumbstick thumbstick];
+        ts.innerImage = [SPImage imageWithContentsOfFile:@"inner.png"];
+        ts.outerImage = [SPImage imageWithContentsOfFile:@"outer.png"];
+        ts.type = SHThumbstickStatic;
+        ts.bounds = [SPRectangle rectangleWithX:0 y:0 width:width_ height:height_];
+        ts.innerRadius = 0;
+        ts.outerRadius = 32;
+        ts.debugDraw = NO;
+        [mContents addChild:ts];
+        ts.x = 600;
+        ts.y = 300;
+    }
+
+    // Add the two thumbsticks
+    [self createConsole:self];
+    
+
 	return self;
 }
 
@@ -71,16 +98,18 @@
 {
     [super setupScene:s height:h width:w];
     Game *gs = (Game *) s;
-    
-    
+
 //    // if this quad does not dispay and you get a purple screen on the simulator
 //    // verify that you have the 
 //    // "other linker flags" field in your target' "build settings" set to "-all_load -ObjC"
-//    SPQuad *quad = [SPQuad quadWithWidth:200 height:200];
+//    SPQuad *quad = [SPQuad quadWithWidth:50 height:50];
 //    quad.color = 0x0000ff;
-//    quad.x = 50;
-//    quad.y = 50;
+//    quad.x = 100;
+//    quad.y = 200;
 //    [self addChild:quad];
+//
+//    return;
+
 //    
 //    SPTexture *texture = [SPTexture emptyTexture];
 //    SPButton *button = [SPButton buttonWithUpState:texture text:@"OK"];
@@ -89,16 +118,12 @@
 //    button.y = h - 50;
 //    [button addEventListener:@selector(onOKButton:) atObject:self forType:SP_EVENT_TYPE_TRIGGERED];
     
+    
+    
+    
     // TEMP: bool to see if the left thumbstick is in use
     tankMoving = NO;
     turretTargetAngle = 0;
-    
-    // Add a container in landscape mode
-    mContents = [SPSprite sprite];
-    mContents = [[SPSprite alloc] init];
-    mContents.rotation = SP_D2R(90);
-    mContents.x = width_;
-    [self addChild:mContents];
     
     // Add the sprite that will manage the scrolling (no map yet)
     scrollingMap = [SPSprite sprite];
@@ -134,7 +159,7 @@
 	[gs displayScene:gs.settingsScene sender:self];
 }
 
-- (void)createConsole{
+- (void)createConsole:(SPSprite *)obj {
     
 	// add the tank thumbstick
 	tankThumbstick = [SHThumbstick thumbstick];
@@ -145,7 +170,7 @@
 	tankThumbstick.innerRadius = 0;
 	tankThumbstick.outerRadius = 32;
 	tankThumbstick.debugDraw = NO;
-	[self addChild:tankThumbstick];
+	[obj addChild:tankThumbstick];
 	tankThumbstick.x = 20;
 	tankThumbstick.y = 20;
 	[tankThumbstick addEventListener:@selector(onLeftThumstickChanged:) atObject:self forType:SH_THUMBSTICK_EVENT_CHANGED];
@@ -159,11 +184,43 @@
 	turretThumbstick.innerRadius = 0;
 	turretThumbstick.outerRadius = 32;
 	turretThumbstick.debugDraw = NO;
-	[self addChild:turretThumbstick];
+	[obj addChild:turretThumbstick];
 	turretThumbstick.x = 20;
 	turretThumbstick.y = height_ -turretThumbstick.width - 20;
 	[turretThumbstick addEventListener:@selector(onRightThumstickChanged:) atObject:self forType:SH_THUMBSTICK_EVENT_CHANGED];
 	
+}
+
+- (void) onOrientationChange:(UIInterfaceOrientation)orientation
+{
+    switch(orientation)
+    {
+        case UIInterfaceOrientationPortrait:
+            tankThumbstick.x = 20;
+            tankThumbstick.y = height_ -turretThumbstick.width - 20;
+            turretThumbstick.x = width_ -turretThumbstick.width - 20;
+            turretThumbstick.y = height_ -turretThumbstick.width - 20;
+            break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            tankThumbstick.x = 20;
+            tankThumbstick.y = height_ -turretThumbstick.width - 20;
+            turretThumbstick.x = width_ -turretThumbstick.width - 20;
+            turretThumbstick.y = height_ -turretThumbstick.width - 20;
+            break;
+        case UIInterfaceOrientationLandscapeLeft:
+            tankThumbstick.x = 20;
+            tankThumbstick.y = height_ -turretThumbstick.width - 20;
+            turretThumbstick.x = width_ -turretThumbstick.width - 20;
+            turretThumbstick.y = height_ -turretThumbstick.width - 20;
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            tankThumbstick.x = 20;
+            tankThumbstick.y = height_ -turretThumbstick.width - 20;
+            turretThumbstick.x = width_ -turretThumbstick.width - 20;
+            turretThumbstick.y = height_ -turretThumbstick.width - 20;
+            break;
+            break;
+    }
 }
 
 - (void)setupChipmunkSpace

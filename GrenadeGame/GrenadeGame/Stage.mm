@@ -8,7 +8,7 @@
 
 #import "Stage.h"
 #import "Scene.h"
-
+#import "Pivot.h"
 @implementation Stage
 
 @synthesize viewController = viewController_;
@@ -32,12 +32,14 @@
 
 - (id)init 
 {
+    [super init];
+
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
     height_ = screenSize.height;
     width_ = screenSize.width;
-        
-    [super init];
-
+    
+    [self setupPivot];
+    
 	return self;
 }
 
@@ -58,7 +60,6 @@
         [scene setupScene:self height:h width:w];
     }
 }
-
 
 - (void) displayScene:(Scene *)show sender:(Scene *)hide
 {
@@ -97,6 +98,26 @@
 	if (hide) 
 		hide.visible = false;
     [hide sceneDidDisappear];
+}
+
+-(void) onOrientationChange:(UIInterfaceOrientation)orientation 
+{
+    for (int n=0, nMax = vecScenes_.size(); n < nMax; ++n) {
+        Scene *scene = vecScenes_[n];
+        if([pivot_ containsChild:scene])
+            [scene onOrientationChange:orientation];
+    }
+}
+
+- (void) setupPivot
+{
+	pivot_ = [[Pivot alloc] init:self];
+	[self addChild:pivot_];	
+}
+
+- (void) enableRotation:(bool)enable
+{
+    [pivot_ enableRotation:enable];
 }
 
 - (void)dealloc {

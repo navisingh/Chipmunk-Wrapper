@@ -17,6 +17,7 @@
     float height_;
     float width_;
     UIViewController *viewController_;
+    Pivot *pivot_;
     std::vector<Scene *> vecScenes_;
 }
 @property (nonatomic, assign) UIViewController *viewController;
@@ -29,5 +30,9 @@
 - (void) displayScene:(Scene *)show sender:(Scene *)hide;
 - (void) sceneWillAppear:(Scene *)show sender:(Scene *)hide;
 - (void) sceneWillDisappear:(Scene *)show sender:(Scene *)hide;
+
+- (void) setupPivot;
+- (void) onOrientationChange:(UIInterfaceOrientation)orientation;
+- (void) enableRotation:(bool)enable;
 
 @end

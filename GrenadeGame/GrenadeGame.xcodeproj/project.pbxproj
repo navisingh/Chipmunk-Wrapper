@@ -37,6 +37,7 @@
 		5D16AEC413B680F200D2F426 /* outer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D16AEBA13B680F200D2F426 /* outer@2x.png */; };
 		5D16AEC513B680F200D2F426 /* turret.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D16AEBB13B680F200D2F426 /* turret.png */; };
 		5D16AEC613B680F200D2F426 /* turret@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D16AEBC13B680F200D2F426 /* turret@2x.png */; };
+		5D6AA92B13BA305C0003D05B /* Pivot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D6AA92A13BA305C0003D05B /* Pivot.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,8 @@
 		5D16AEBA13B680F200D2F426 /* outer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "outer@2x.png"; path = "GrenadeGame/images/outer@2x.png"; sourceTree = "<group>"; };
 		5D16AEBB13B680F200D2F426 /* turret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = turret.png; path = GrenadeGame/images/turret.png; sourceTree = "<group>"; };
 		5D16AEBC13B680F200D2F426 /* turret@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "turret@2x.png"; path = "GrenadeGame/images/turret@2x.png"; sourceTree = "<group>"; };
+		5D6AA92913BA305C0003D05B /* Pivot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pivot.h; sourceTree = "<group>"; };
+		5D6AA92A13BA305C0003D05B /* Pivot.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Pivot.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				5D16AE9513B55B9C00D2F426 /* Stage.mm */,
 				5D16AE9113B55AFB00D2F426 /* Utils.h */,
 				5D16AE9213B55AFB00D2F426 /* Utils.mm */,
+				5D6AA92913BA305C0003D05B /* Pivot.h */,
+				5D6AA92A13BA305C0003D05B /* Pivot.mm */,
 			);
 			name = Classes;
 			path = GrenadeGame;
@@ -219,6 +224,9 @@
 /* Begin PBXProject section */
 		5D16AE4513B5538400D2F426 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = NaviGamer;
+			};
 			buildConfigurationList = 5D16AE4813B5538400D2F426 /* Build configuration list for PBXProject "GrenadeGame" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -271,6 +279,7 @@
 				5D16AE9913B55CCE00D2F426 /* Scene.mm in Sources */,
 				5D16AE9C13B55FD900D2F426 /* SceneMain.mm in Sources */,
 				5D16AE9F13B55FED00D2F426 /* SceneSettings.mm in Sources */,
+				5D6AA92B13BA305C0003D05B /* Pivot.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

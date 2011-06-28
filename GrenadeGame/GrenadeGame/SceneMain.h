@@ -24,6 +24,7 @@
 	CMBody *turretBody;
 	
 	// Main cointaner & scrolling map container
+    SPSprite  *mContents2;
 	SPSprite *mContents;
 	SPSprite *scrollingMap;
 	

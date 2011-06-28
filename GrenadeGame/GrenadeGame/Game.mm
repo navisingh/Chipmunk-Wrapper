@@ -60,15 +60,16 @@
 {
 	[super init];
     
-    pivot_ = [[SPSprite alloc] init];
-    [self addChild:pivot_];
     
-    pivot_.x = 0;
-    pivot_.y = height_;
-    pivot_.rotation = SP_D2R(-90);
-    pivot_.scaleY = width_ / height_;
-    pivot_.scaleX = height_ / width_;
-    
+//    pivot_ = [[SPSprite alloc] init];
+//    [self addChild:pivot_];
+//    
+//    pivot_.x = 0;
+//    pivot_.y = height_;
+//    pivot_.rotation = SP_D2R(-90);
+//    pivot_.scaleY = width_ / height_;
+//    pivot_.scaleX = height_ / width_;
+//    
 	return self;
 }
 
@@ -103,7 +104,8 @@
 + (Game *)stageWithController:(UIViewController *)controller
                          view:(SPView *)view
 {    
-    [[UIApplication sharedApplication] setStatusBarOrientation: UIInterfaceOrientationLandscapeRight];
+    //this sets the game in landscape mode from the begining.
+    [[UIApplication sharedApplication] setStatusBarOrientation: UIInterfaceOrientationLandscapeLeft];
     
 	Game *game;
     game = [[NSKeyedUnarchiver unarchiveObjectWithFile:pathInDocumentDirectory(ARCHIVE_FILE)] retain];
@@ -113,6 +115,9 @@
     game.viewController = controller;
     
 	[game didAttachStageToView]; //to work around _SET_STAGE notification bug.
+    
+    //since we are using a view controller with autorotate=false, we don't need to enable rotation.
+    [game enableRotation:false]; //the pivot monitors device rotation and reacts accordingly.
     
 	return [game autorelease];
 }

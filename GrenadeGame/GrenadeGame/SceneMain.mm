@@ -118,8 +118,10 @@
 //    button.y = h - 50;
 //    [button addEventListener:@selector(onOKButton:) atObject:self forType:SP_EVENT_TYPE_TRIGGERED];
     
-    
-    
+    SPTextField *helloWorld = [SPTextField textFieldWithWidth:55 height:15 text:[NSString stringWithString:@"Hello world"]]; 
+    helloWorld.x = 100;
+    helloWorld.y = 100;
+    [mContents addChild:helloWorld];
     
     // TEMP: bool to see if the left thumbstick is in use
     tankMoving = NO;
@@ -218,7 +220,6 @@
             tankThumbstick.y = height_ -turretThumbstick.width - 20;
             turretThumbstick.x = width_ -turretThumbstick.width - 20;
             turretThumbstick.y = height_ -turretThumbstick.width - 20;
-            break;
             break;
     }
 }

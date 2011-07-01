@@ -22,4 +22,7 @@
    <FileRef
       location = "group:Chipmunk-Wrapper/ChipmunkWrapper.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:GrenadeGame/GrenadeGame.xcodeproj">
+   </FileRef>
 </Workspace>

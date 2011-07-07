@@ -1,5 +1,4 @@
-er
-!default.pbxuser
+*.pbxuser
 *.mode1
 *.mode1v3
 !default.mode1v3
@@ -8,7 +7,7 @@ er
 *.perspective
 *.perspectivev3
 !default.perspectivev3
-*.xcuserdata/
+xcuserdata
 profile
 *.moved-aside
 

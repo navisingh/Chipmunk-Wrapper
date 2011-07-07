@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ChipmunkTerrain/ChipmunkTerrain.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Chipmunk-Wrapper/Classes/ChipmunkEx/ChipmunkEx.xcodeproj">
    </FileRef>
    <FileRef
@@ -12,9 +15,6 @@
    </FileRef>
    <FileRef
       location = "group:../../NaviGamer/Tank-day2/Tank-day2.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:../../NaviGamer/ChipmunkTerrain/ChipmunkTerrain.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ChipmunkScrollingTerrain/ChipmunkScrollingTerrain.xcodeproj">
